@@ -2,6 +2,8 @@ class Anagram
 
   private
 
+  attr_reader :target_word
+
   def initialize(target_word)
     @target_word = target_word.downcase
   end
@@ -15,8 +17,6 @@ class Anagram
   end
 
   public
-
-  attr_reader :target_word
 
   def match(candidates)
     candidates.select do |candidate|
